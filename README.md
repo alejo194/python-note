@@ -6,5 +6,7 @@ https://alvinzhu.xyz/2017/10/07/python-pep-8/ </br>
 https://www.liaoxuefeng.com/wiki/1016959663602400/1017261630425888 </br>
 3.python 官网 </br>
 https://docs.python.org/zh-cn/3/ </br>
+4.常用内置函数 </br>
+https://www.jianshu.com/p/63bfe80d9a76 </br>
 # flask
 https://dormousehole.readthedocs.io/en/latest/
