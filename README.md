@@ -1,3 +1,6 @@
+#### python
+python 多范式编程：结构式，函数，面向对象 </br>
+数据和算法 </br>
 # python-note
 python笔记，相关知识点整理 </br>
 1.编码规范</br>
