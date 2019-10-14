@@ -1,5 +1,5 @@
 #### python
-python是动态语言，强类型语言
+python是动态语言，强类型语言 </br>
 python 多范式编程：结构式，函数，面向对象 </br>
 数据和算法 </br>
 # python-note
