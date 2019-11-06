@@ -1,0 +1,17 @@
+```bash
+def add(x,y):
+    return x + y
+add(4,5)
+9
+z=f(x,y)
+
+def new_add(x):
+    def inner(y):
+        return x+y
+    return inner
+new_add(4)
+<function new_add.<locals>.inner at 0x00000000038D8158>
+new_add(4)(5)
+9
+z=f(x)(y)
+```
