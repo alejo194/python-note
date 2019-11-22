@@ -12,5 +12,7 @@ https://www.liaoxuefeng.com/wiki/1016959663602400/1017261630425888 </br>
 https://docs.python.org/zh-cn/3/ </br>
 4.常用内置函数 </br>
 https://www.jianshu.com/p/63bfe80d9a76 </br>
+5.项目实例</br>
+https://github.com/zhouxinkai/awesome-python3-webapp </br>
 # flask
 https://dormousehole.readthedocs.io/en/latest/
