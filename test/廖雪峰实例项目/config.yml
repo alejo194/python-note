@@ -1,4 +1,4 @@
-log_level: 20
+logger_level: 20
 database:
   - maxbus:
       host: 127.0.0.1
