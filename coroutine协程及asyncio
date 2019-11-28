@@ -1,0 +1,49 @@
+参考：https://blog.csdn.net/qq_27825451/article/details/86218230 </br>
+     https://blog.csdn.net/qq_27825451/article/details/86292513 </br>
+     https://blog.csdn.net/qq_27825451/article/details/86483493 </br>
+#### 协程
+##### 协程
+函数关键字async和await, 这个函数就是生成器 </br>
+##### 事件循环 -- event_loop
+```
+async def test():
+   print('start.')
+   await asyncio.sleep(30)
+   print('end')
+
+#调用这个使用
+asyncio.run() # python 3.7
+or
+loop = asyncio.get_event_loop()  #创建事件循环对象
+loop.run_until_complete(test())  #通过事件循环对象运行协程函数
+loop.close()
+```
+1, 获取事件循环对象的几种方式：</br>
+```bash
+loop = asyncio.get_running_loop()
+loop = asyncio.get_event_loop()
+loop = asyncio.set_event_loop(loop)
+loop = asyncio.new_event_loop()
+```
+2, 通过事件循环运行协程函数的两种方式 </br>
+（1）创建事件循环对象loop，通过事件循环运行协程函数 </br>
+（2）直接通过asyncio.run(function_name)运行协程函数；run函数总是会创建一个新的事件循环并在run结束之后关闭事件循环 </br>
+##### 什么是awaitable对象 -- 即可暂停等待的对象
+有三类对象是可等待的，即coroutines, Task, Futures </br>
+三者的关系，coroutine可以自动封装成task，而Task是Future的子类。</br>
+##### 什么是task任务
+Task用来并发调度的协程</br>
+（1）创建任务（两种）：</br>
+```bash
+task = asyncio.create_task(coro())
+or
+task = asyncio.ensure_future(coro())
+```
+(2)获取某一任务的方法：</br>
+```bash
+task = asyncio.current_task(loop=None)
+or
+asyncio.all_tasks(loop=None)
+```
+##### 什么事future
+Future是Task的父类
