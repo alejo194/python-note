@@ -16,14 +16,27 @@ services:
     network_mode: maxwin_default
     ports:
       - 3306:3306
-    #volumes:
+    volumes:
       #- ./mysql:/etc/mysql/conf.d
       #- mysql_data:/var/lib/mysql
+      - mysql_test:/var/lib/mysql
     #command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
     #command: mysqld --skip-grant-tables --character-set-server=utf8 --collation-server=utf8_unicode_ci  
-    ##启动后`mysql -u root -p `报ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)，开启上面--skip-grant-tables命令
+    ##启动后`mysql -u root -p `报ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)，开启上面--skip-grant-tables命令,
+    ##用于跳过密码
+    ## 1> mysql -u root -p
+    ## 2> use mysql;
+    ## 3> update user set authentication_string=password("123456") where user="root"; #修改密码
+    ## 4> flush privileges; #刷新资料库
+    ## 5> exit
+    ## 注释command
     logging:
       driver: "json-file"
       options:
         max-size: "20m"
         max-file: "10"
+volumes:
+  mysql_test:
+    driver: local
+    
+# docker volume create mysql_test 创建volumes
