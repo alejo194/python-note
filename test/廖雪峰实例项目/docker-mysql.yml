@@ -1,0 +1,29 @@
+version: '2'
+services:
+  db:
+    image: mysql:5.7
+    container_name: db
+    hostname: db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      #MYSQL_ROOT_PASSWORD: maxwin.maxwin
+      #MYSQL_DATABASE: redmine
+      #MYSQL_RANDOM_ROOT_PASSWORD: maxwin.maxwin
+      #LANG: C.UTF-8
+      #MYSQL_CHARSET: utf-8
+      #SERVICE_IGNORE: 'true'
+    network_mode: maxwin_default
+    ports:
+      - 3306:3306
+    #volumes:
+      #- ./mysql:/etc/mysql/conf.d
+      #- mysql_data:/var/lib/mysql
+    #command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
+    #command: mysqld --skip-grant-tables --character-set-server=utf8 --collation-server=utf8_unicode_ci  
+    ##启动后`mysql -u root -p `报ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)，开启上面--skip-grant-tables命令
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "10"
