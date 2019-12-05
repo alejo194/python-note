@@ -14,5 +14,7 @@ https://docs.python.org/zh-cn/3/ </br>
 https://www.jianshu.com/p/63bfe80d9a76 </br>
 5.项目实例</br>
 https://github.com/zhouxinkai/awesome-python3-webapp </br>
+6.python文章
+https://www.itcodemonkey.com/Portal/Search/index/keyword/python/p/6
 # flask
 https://dormousehole.readthedocs.io/en/latest/
