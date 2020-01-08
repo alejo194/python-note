@@ -15,7 +15,7 @@ with open('test.csv','r') as csvFile:
     for line in reader:
         print(line)
 ```
-+一定要注意，csv文件在写入时，字段和字段之间是用逗号"",""分割的，如果稍不注意，就会出现串行的情况
++ 一定要注意，csv文件在写入时，字段和字段之间是用逗号"",""分割的，如果稍不注意，就会出现串行的情况
 
 #### 2.python读写excel文件
 ```bash
