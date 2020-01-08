@@ -19,6 +19,14 @@ with open('test.csv','r') as csvFile:
 
 #### 2.python读写excel文件
 ```bash
+import xlwt
+#创建工作薄
+f = xlwt.Workbook()
+'''
+   创建第一个sheet:
+   sheet1
+'''
+#
 ```
 
 #### 3.python读写txt文件
